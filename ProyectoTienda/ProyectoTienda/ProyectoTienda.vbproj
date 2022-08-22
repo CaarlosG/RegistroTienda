@@ -80,6 +80,12 @@
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menuinicio.Designer.vb">
+      <DependentUpon>Menuinicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menuinicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -99,6 +105,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Inicio_sesion.resx">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menuinicio.resx">
+      <DependentUpon>Menuinicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
