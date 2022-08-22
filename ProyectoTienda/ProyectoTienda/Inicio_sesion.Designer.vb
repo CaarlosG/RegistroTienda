@@ -23,8 +23,8 @@ Partial Class Inicio_sesion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio_sesion))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tbname = New System.Windows.Forms.TextBox()
+        Me.tbpassword = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -32,26 +32,26 @@ Partial Class Inicio_sesion
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'tbname
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Yu Gothic UI", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(134, 62)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(336, 39)
-        Me.TextBox1.TabIndex = 2
-        Me.TextBox1.Text = "Username"
+        Me.tbname.Font = New System.Drawing.Font("Yu Gothic UI", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbname.Location = New System.Drawing.Point(134, 62)
+        Me.tbname.Multiline = True
+        Me.tbname.Name = "tbname"
+        Me.tbname.Size = New System.Drawing.Size(336, 39)
+        Me.tbname.TabIndex = 2
+        Me.tbname.Text = "Username"
         '
-        'TextBox2
+        'tbpassword
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Yu Gothic UI", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(134, 107)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(336, 39)
-        Me.TextBox2.TabIndex = 3
-        Me.TextBox2.Text = "Contraseña"
+        Me.tbpassword.Font = New System.Drawing.Font("Yu Gothic UI", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbpassword.Location = New System.Drawing.Point(134, 107)
+        Me.tbpassword.Multiline = True
+        Me.tbpassword.Name = "tbpassword"
+        Me.tbpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbpassword.Size = New System.Drawing.Size(336, 39)
+        Me.tbpassword.TabIndex = 3
+        Me.tbpassword.Text = "Contraseña"
         '
         'Button1
         '
@@ -93,8 +93,8 @@ Partial Class Inicio_sesion
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbpassword)
+        Me.Controls.Add(Me.tbname)
         Me.Font = New System.Drawing.Font("Yu Gothic UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "Inicio_sesion"
         Me.ShowIcon = False
@@ -107,8 +107,8 @@ Partial Class Inicio_sesion
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tbname As TextBox
+    Friend WithEvents tbpassword As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
