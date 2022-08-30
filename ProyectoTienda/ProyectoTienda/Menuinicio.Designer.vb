@@ -23,11 +23,13 @@ Partial Class Menuinicio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Control
         Me.Button2.Location = New System.Drawing.Point(636, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -36,6 +38,17 @@ Partial Class Menuinicio
         Me.Button2.Text = "Cerrar sesión"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button1.Location = New System.Drawing.Point(28, 60)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(205, 53)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Productos"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Menuinicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -43,6 +56,7 @@ Partial Class Menuinicio
         Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.ClientSize = New System.Drawing.Size(807, 509)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Name = "Menuinicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -52,4 +66,5 @@ Partial Class Menuinicio
     End Sub
 
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class
