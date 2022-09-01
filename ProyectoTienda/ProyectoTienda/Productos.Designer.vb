@@ -32,6 +32,7 @@ Partial Class Productos
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.Location = New System.Drawing.Point(38, 48)
         Me.Button1.Name = "Button1"
@@ -43,6 +44,7 @@ Partial Class Productos
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
         Me.Button2.Location = New System.Drawing.Point(329, 48)
         Me.Button2.Name = "Button2"
@@ -54,6 +56,7 @@ Partial Class Productos
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.ForeColor = System.Drawing.SystemColors.Control
         Me.Button3.Location = New System.Drawing.Point(38, 171)
         Me.Button3.Name = "Button3"
@@ -65,6 +68,7 @@ Partial Class Productos
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button4.ForeColor = System.Drawing.SystemColors.Control
         Me.Button4.Location = New System.Drawing.Point(329, 171)
         Me.Button4.Name = "Button4"
@@ -76,6 +80,7 @@ Partial Class Productos
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button5.ForeColor = System.Drawing.SystemColors.Control
         Me.Button5.Location = New System.Drawing.Point(38, 285)
         Me.Button5.Name = "Button5"

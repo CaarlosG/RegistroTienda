@@ -34,16 +34,17 @@ Partial Class Inventario
         Me.DataGridView3.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowTemplate.Height = 24
-        Me.DataGridView3.Size = New System.Drawing.Size(858, 394)
+        Me.DataGridView3.Size = New System.Drawing.Size(1049, 394)
         Me.DataGridView3.TabIndex = 2
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.Location = New System.Drawing.Point(12, 412)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(350, 53)
+        Me.Button1.Size = New System.Drawing.Size(517, 53)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Recargar"
         Me.Button1.UseVisualStyleBackColor = False
@@ -51,10 +52,11 @@ Partial Class Inventario
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button2.Location = New System.Drawing.Point(368, 412)
+        Me.Button2.Location = New System.Drawing.Point(544, 412)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(502, 53)
+        Me.Button2.Size = New System.Drawing.Size(517, 53)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Volver"
         Me.Button2.UseVisualStyleBackColor = False
@@ -64,7 +66,7 @@ Partial Class Inventario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(880, 474)
+        Me.ClientSize = New System.Drawing.Size(1073, 474)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

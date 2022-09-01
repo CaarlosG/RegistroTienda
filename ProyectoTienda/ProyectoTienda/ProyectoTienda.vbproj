@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar.Designer.vb">
+      <DependentUpon>Agregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar.Designer.vb">
+      <DependentUpon>Eliminar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicio_sesion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,12 @@
       <DependentUpon>Menuinicio.vb</DependentUpon>
     </Compile>
     <Compile Include="Menuinicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar.Designer.vb">
+      <DependentUpon>Modificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -115,6 +133,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Agregar.resx">
+      <DependentUpon>Agregar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar.resx">
+      <DependentUpon>Eliminar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio_sesion.resx">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menuinicio.resx">
       <DependentUpon>Menuinicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar.resx">
+      <DependentUpon>Modificar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
