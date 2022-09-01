@@ -31,7 +31,7 @@ Partial Class Menuinicio
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button2.Location = New System.Drawing.Point(636, 12)
+        Me.Button2.Location = New System.Drawing.Point(12, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Button2.Size = New System.Drawing.Size(159, 44)
@@ -44,11 +44,11 @@ Partial Class Menuinicio
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button1.Location = New System.Drawing.Point(28, 60)
+        Me.Button1.Location = New System.Drawing.Point(12, 72)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(205, 53)
+        Me.Button1.Size = New System.Drawing.Size(783, 53)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Productos"
+        Me.Button1.Text = "Menú produtos"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Menuinicio
