@@ -24,6 +24,7 @@ Partial Class Menuinicio
     Private Sub InitializeComponent()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button2
@@ -51,6 +52,18 @@ Partial Class Menuinicio
         Me.Button1.Text = "Menú produtos"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button3.Location = New System.Drawing.Point(12, 147)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(783, 53)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Registrar ventas"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'Menuinicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -58,6 +71,7 @@ Partial Class Menuinicio
         Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.ClientSize = New System.Drawing.Size(807, 509)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Name = "Menuinicio"
@@ -69,4 +83,5 @@ Partial Class Menuinicio
 
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
 End Class
