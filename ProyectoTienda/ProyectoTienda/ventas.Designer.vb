@@ -30,6 +30,7 @@ Partial Class ventas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tbnit = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -43,9 +44,8 @@ Partial Class ventas
         Me.Button2 = New System.Windows.Forms.Button()
         Me.nudcant = New System.Windows.Forms.NumericUpDown()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.tbproducto = New System.Windows.Forms.TextBox()
+        Me.tbcodprod = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.nudcant, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,6 +131,17 @@ Partial Class ventas
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del cliente"
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button4.Location = New System.Drawing.Point(630, 22)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(73, 45)
+        Me.Button4.TabIndex = 28
+        Me.Button4.Text = "Añadir"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.DarkSlateGray
@@ -146,8 +157,9 @@ Partial Class ventas
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.nudcant)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.tbproducto)
+        Me.GroupBox2.Controls.Add(Me.tbcodprod)
         Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Enabled = False
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Control
         Me.GroupBox2.Location = New System.Drawing.Point(12, 120)
         Me.GroupBox2.Name = "GroupBox2"
@@ -252,7 +264,7 @@ Partial Class ventas
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(603, 24)
+        Me.Button2.Location = New System.Drawing.Point(590, 27)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(92, 45)
@@ -262,7 +274,7 @@ Partial Class ventas
         '
         'nudcant
         '
-        Me.nudcant.Location = New System.Drawing.Point(474, 36)
+        Me.nudcant.Location = New System.Drawing.Point(400, 36)
         Me.nudcant.Margin = New System.Windows.Forms.Padding(4)
         Me.nudcant.Name = "nudcant"
         Me.nudcant.Size = New System.Drawing.Size(91, 22)
@@ -271,20 +283,20 @@ Partial Class ventas
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(426, 41)
+        Me.Label5.Location = New System.Drawing.Point(352, 41)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(37, 17)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Cant"
         '
-        'tbproducto
+        'tbcodprod
         '
-        Me.tbproducto.Location = New System.Drawing.Point(87, 38)
-        Me.tbproducto.Margin = New System.Windows.Forms.Padding(4)
-        Me.tbproducto.Name = "tbproducto"
-        Me.tbproducto.Size = New System.Drawing.Size(329, 22)
-        Me.tbproducto.TabIndex = 24
+        Me.tbcodprod.Location = New System.Drawing.Point(87, 38)
+        Me.tbcodprod.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbcodprod.Name = "tbcodprod"
+        Me.tbcodprod.Size = New System.Drawing.Size(256, 22)
+        Me.tbcodprod.TabIndex = 24
         '
         'Label4
         '
@@ -295,17 +307,6 @@ Partial Class ventas
         Me.Label4.Size = New System.Drawing.Size(65, 17)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "Producto"
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button4.Location = New System.Drawing.Point(630, 22)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(73, 45)
-        Me.Button4.TabIndex = 28
-        Me.Button4.Text = "Añadir"
-        Me.Button4.UseVisualStyleBackColor = False
         '
         'ventas
         '
@@ -350,7 +351,7 @@ Partial Class ventas
     Friend WithEvents Button2 As Button
     Friend WithEvents nudcant As NumericUpDown
     Friend WithEvents Label5 As Label
-    Friend WithEvents tbproducto As TextBox
+    Friend WithEvents tbcodprod As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Button4 As Button
 End Class

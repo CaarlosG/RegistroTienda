@@ -6,7 +6,7 @@ Public Class Eliminar
         Dim da As MySqlDataAdapter
         Dim dt As DataTable
         conect.Open()
-        Dim sQuery = "select p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', p.id_proveedor as 'Proveedores', p.precio_venta as 'Precio', p.descripcion as 'Descripción' from productos p;"
+        Dim sQuery = "select p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', p.id_proveedor as 'Proveedores', p.precio as 'Precio', p.descripcion as 'Descripción' from productos p;"
         da = New MySqlDataAdapter(sQuery, conect)
         dt = New DataTable
         da.Fill(dt)

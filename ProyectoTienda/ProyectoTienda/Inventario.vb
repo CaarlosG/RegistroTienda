@@ -6,7 +6,7 @@ Public Class Inventario
         Dim da As MySqlDataAdapter
         Dim dt As DataTable
         conect.Open()
-        Dim sQuery = "SELECT p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', pr.nombre as 'Proveedores', p.precio_venta as 'Precio', p.descripcion as 'Descripción' from productos p inner join proveedores pr on p.id_proveedor = p.id_proveedor;"
+        Dim sQuery = "SELECT p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', pr.nombre as 'Proveedores', p.precio as 'Precio', p.descripcion as 'Descripción' from productos p inner join proveedores pr on p.id_proveedor = p.id_proveedor;"
         da = New MySqlDataAdapter(sQuery, conect)
         dt = New DataTable
         da.Fill(dt)
@@ -26,6 +26,10 @@ Public Class Inventario
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         inv()
+
+    End Sub
+
+    Private Sub DataGridView3_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView3.CellContentClick
 
     End Sub
 End Class

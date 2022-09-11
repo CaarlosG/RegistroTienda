@@ -50,7 +50,7 @@ Public Class Modificar
         Dim da As MySqlDataAdapter
         Dim ds As New DataSet
         conect.Open()
-        Dim sQuery = "SELECT nombre_productos, existencias, id_proveedor, precio_venta, descripcion FROM productos WHERE id_productos = '" & Me.tbcodigo.Text & "';"
+        Dim sQuery = "SELECT nombre_productos, existencias, id_proveedor, precio, descripcion FROM productos WHERE id_productos = '" & Me.tbcodigo.Text & "';"
         da = New MySqlDataAdapter(sQuery, conect)
 
         tb1.Clear()
@@ -72,7 +72,7 @@ Public Class Modificar
         Dim conect As New MySqlConnection(cadenaConect)
         conect.Open()
 
-        Dim cmd As New MySqlCommand("UPDATE productos SET nombre_productos = '" & Me.tb1.Text & "', existencias = '" & Me.tb2.Text & "', id_proveedor = '" & Me.cb1.Text & "' , precio_venta = '" & Me.tb3.Text & "' , descripcion = '" & Me.tb4.Text & "' Where id_productos = '" & Conversion.Int(Me.tbcodigo.Text) & "'", conect)
+        Dim cmd As New MySqlCommand("UPDATE productos SET nombre_productos = '" & Me.tb1.Text & "', existencias = '" & Me.tb2.Text & "', id_proveedor = '" & Me.cb1.Text & "' , precio = '" & Me.tb3.Text & "' , descripcion = '" & Me.tb4.Text & "' Where id_productos = '" & Conversion.Int(Me.tbcodigo.Text) & "'", conect)
         cmd.ExecuteNonQuery()
 
         conect.Close()
