@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Inicio_sesion
+    Public encargado As String
+    Public id As String
     Private Sub Inicio_sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim cadenaConect = "Server=localhost;Database=tienda;User id=root;Password=;Port=3306"
         Dim conect As New MySqlConnection(cadenaConect)
@@ -30,6 +32,8 @@ Public Class Inicio_sesion
         If read.HasRows <> False Then
             read.Read()
 
+            encargado = read.GetString("nombre_encargado")
+            id = read.GetString("id_encargado")
             MessageBox.Show("Bienvenido" & " " & read.GetString("nombre_encargado"))
             conect.Close()
             tbname.Clear()

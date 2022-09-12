@@ -6,7 +6,7 @@ Public Class Agregar
         Dim da As MySqlDataAdapter
         Dim dt As DataTable
         conect.Open()
-        Dim sQuery = "select p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', p.id_proveedor as 'Proveedores', p.precio_venta as 'Precio', p.descripcion as 'Descripción' from productos p;"
+        Dim sQuery = "SELECT p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', pr.nombre as 'Proveedores', p.precio as 'Precio', p.descripcion as 'Descripción' from productos p inner join proveedores pr on p.id_proveedor = p.id_proveedor;"
         da = New MySqlDataAdapter(sQuery, conect)
         dt = New DataTable
         da.Fill(dt)
@@ -19,12 +19,12 @@ Public Class Agregar
         Dim da As MySqlDataAdapter
         Dim ds As New DataSet
         conect.Open()
-        Dim sQuery = "SELECT id_proveedores from proveedores;"
+        Dim sQuery = "SELECT id_proveedores, nombre from proveedores;"
         da = New MySqlDataAdapter(sQuery, conect)
 
         da.Fill(ds)
         cb1.DataSource = ds.Tables(0)
-        cb1.DisplayMember = "id_proveedores"
+        cb1.DisplayMember = "nombre"
         cb1.ValueMember = "id_proveedores"
         conect.Close()
     End Sub
@@ -33,7 +33,7 @@ Public Class Agregar
         Dim conect As New MySqlConnection(cadenaConect)
         conect.Open()
 
-        Dim cmd As New MySqlCommand("Insert into productos(id_productos, nombre_productos, existencias, id_proveedor, precio_venta, descripcion)VALUES('""', '" & Me.tb1.Text & "', '" & Me.tb2.Text & "', '" & Me.cb1.Text & "','" & Me.tb3.Text & "', '" & Me.tb4.Text & "')", conect)
+        Dim cmd As New MySqlCommand("Insert into productos(id_productos, nombre_productos, existencias, id_proveedor, precio, descripcion)VALUES('""', '" & Me.tb1.Text & "', '" & Me.tb2.Text & "', '" & Me.cb1.SelectedIndex + 1 & "','" & Me.tb3.Text & "', '" & Me.tb4.Text & "')", conect)
         cmd.ExecuteNonQuery()
 
         conect.Close()

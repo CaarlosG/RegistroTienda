@@ -1,5 +1,27 @@
-﻿Public Class Menuinicio
+﻿Imports MySql.Data.MySqlClient
+Public Class Menuinicio
+    Public tienda As String
+    Sub tiendas()
+        Dim cadenaConect = "Server=localhost;Database=tienda;User id=root;Password=;Port=3306"
+        Dim conect As New MySqlConnection(cadenaConect)
+        Dim da As MySqlDataAdapter
+        Dim ds As New DataSet
+        conect.Open()
+        Dim sQuery = "Select t.id_tienda, m.nombre_muni from tienda t INNER JOIN municipio m on t.id_municipio = m.id_municipio where t.id_encargado = '" & Inicio_sesion.id & "';"
+        da = New MySqlDataAdapter(sQuery, conect)
+        da.Fill(ds, "tienda")
+        conect.Close()
+
+        tienda = ds.Tables("tienda").Rows(0).Item(0)
+        tbtienda.Text = ds.Tables("tienda").Rows(0).Item(1)
+
+        tbencargado.Text = Inicio_sesion.id & " " & Inicio_sesion.encargado
+
+    End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        tbencargado.Clear()
+        tbencargado.Clear()
+
         Me.Close()
         Inicio_sesion.Show()
 
@@ -16,4 +38,11 @@
         ventas.Show()
 
     End Sub
+
+    Private Sub Menuinicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tiendas()
+
+    End Sub
+
+
 End Class

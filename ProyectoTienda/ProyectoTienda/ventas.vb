@@ -6,10 +6,12 @@ Public Class ventas
     Public cantidad(100) As Integer
     Public precio(100) As Double
     Public subtotal(100) As Double
+    Dim fecha As String
     Public total As Double
     Dim contador = 0
+    Dim idc As String
     Sub datosc()
-        Dim fecha, nombre, direccion, nit As String
+        Dim nombre, direccion, nit As String
         fecha = DateTime.Now()
         nombre = tbname.Text
         direccion = tbdireccion.Text
@@ -78,6 +80,30 @@ Public Class ventas
         Next
 
     End Sub
+    Sub idcliente()
+        Dim cadenaConect = "Server=localhost;Database=tienda;User id=root;Password=;Port=3306"
+        Dim conect As New MySqlConnection(cadenaConect)
+        Dim da As MySqlDataAdapter
+        Dim ds As New DataSet
+        conect.Open()
+        Dim sQuery = "SELECT id_clientes from clientes WHERE nombre_cliente = '" & Me.tbname.Text & "';"
+        da = New MySqlDataAdapter(sQuery, conect)
+        da.Fill(ds, "clientes")
+        conect.Close()
+
+        idc = ds.Tables("clientes").Rows(0).Item(0)
+    End Sub
+    Sub venta()
+        Dim cadenaConect = "Server=localhost;Database=tienda;User id=root;Password=;Port=3306;"
+        Dim conect As New MySqlConnection(cadenaConect)
+        conect.Open()
+
+        Dim cmd As New MySqlCommand("Insert into ventas(id_ventas, id_tienda, id_cliente, ingresos, fecha_venta)VALUES('""', '" & Menuinicio.tienda & "', '" & idc & "', '" & Me.tbtotal.Text & "', '" & fecha & "')", conect)
+        cmd.ExecuteNonQuery()
+
+        conect.Close()
+
+    End Sub
     Sub reinicio()
         GroupBox1.Enabled = True
         tbname.Clear()
@@ -103,15 +129,30 @@ Public Class ventas
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        agcliente()
-        datosc()
+        If tbname.TextLength = 0 Or tbnit.TextLength = 0 Or tbdireccion.TextLength = 0 Then
+            MessageBox.Show("Debe ingresar un cliente")
+        Else
+            agcliente()
+            datosc()
+            idcliente()
 
+        End If
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Hide()
-        Factura.Show()
-        reinicio()
+        If lbproducto.Items.Count = 0 Then
+            MessageBox.Show("Debe ingresar algún producto")
+        Else
+            Me.Hide()
+            Factura.Show()
+            venta()
+            reinicio()
+
+        End If
+
+    End Sub
+
+    Private Sub ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

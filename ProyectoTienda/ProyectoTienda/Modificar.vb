@@ -22,7 +22,7 @@ Public Class Modificar
         Dim da As MySqlDataAdapter
         Dim dt As DataTable
         conect.Open()
-        Dim sQuery = "select p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', p.id_proveedor as 'Proveedores', p.precio_venta as 'Precio', p.descripcion as 'Descripción' from productos p;"
+        Dim sQuery = "SELECT p.id_productos as 'ID', p.nombre_productos as 'Nombre producto', p.existencias as 'Existencias', pr.nombre as 'Proveedores', p.precio as 'Precio', p.descripcion as 'Descripción' from productos p inner join proveedores pr on p.id_proveedor = p.id_proveedor;"
         da = New MySqlDataAdapter(sQuery, conect)
         dt = New DataTable
         da.Fill(dt)
@@ -35,12 +35,12 @@ Public Class Modificar
         Dim da As MySqlDataAdapter
         Dim ds As New DataSet
         conect.Open()
-        Dim sQuery = "SELECT id_proveedores from proveedores;"
+        Dim sQuery = "SELECT id_proveedores, nombre from proveedores;"
         da = New MySqlDataAdapter(sQuery, conect)
 
         da.Fill(ds)
         cb1.DataSource = ds.Tables(0)
-        cb1.DisplayMember = "id_proveedores"
+        cb1.DisplayMember = "nombre"
         cb1.ValueMember = "id_proveedores"
         conect.Close()
     End Sub
@@ -50,7 +50,7 @@ Public Class Modificar
         Dim da As MySqlDataAdapter
         Dim ds As New DataSet
         conect.Open()
-        Dim sQuery = "SELECT nombre_productos, existencias, id_proveedor, precio, descripcion FROM productos WHERE id_productos = '" & Me.tbcodigo.Text & "';"
+        Dim sQuery = "SELECT p.nombre_productos, p.existencias, pr.nombre, p.precio, p.descripcion from productos p inner join proveedores pr on p.id_proveedor = p.id_proveedor WHERE id_productos = '" & Me.tbcodigo.Text & "';"
         da = New MySqlDataAdapter(sQuery, conect)
 
         tb1.Clear()
@@ -72,7 +72,7 @@ Public Class Modificar
         Dim conect As New MySqlConnection(cadenaConect)
         conect.Open()
 
-        Dim cmd As New MySqlCommand("UPDATE productos SET nombre_productos = '" & Me.tb1.Text & "', existencias = '" & Me.tb2.Text & "', id_proveedor = '" & Me.cb1.Text & "' , precio = '" & Me.tb3.Text & "' , descripcion = '" & Me.tb4.Text & "' Where id_productos = '" & Conversion.Int(Me.tbcodigo.Text) & "'", conect)
+        Dim cmd As New MySqlCommand("UPDATE productos SET nombre_productos = '" & Me.tb1.Text & "', existencias = '" & Me.tb2.Text & "', id_proveedor = '" & Me.cb1.SelectedIndex + 1 & "' , precio = '" & Me.tb3.Text & "' , descripcion = '" & Me.tb4.Text & "' Where id_productos = '" & Conversion.Int(Me.tbcodigo.Text) & "'", conect)
         cmd.ExecuteNonQuery()
 
         conect.Close()

@@ -37,7 +37,9 @@ Partial Class Inicio_sesion
         '
         'tbname
         '
+        Me.tbname.BackColor = System.Drawing.Color.DarkSlateGray
         Me.tbname.Font = New System.Drawing.Font("Yu Gothic UI", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbname.ForeColor = System.Drawing.SystemColors.Control
         Me.tbname.Location = New System.Drawing.Point(134, 62)
         Me.tbname.Name = "tbname"
         Me.tbname.Size = New System.Drawing.Size(330, 37)
@@ -45,7 +47,9 @@ Partial Class Inicio_sesion
         '
         'tbpassword
         '
+        Me.tbpassword.BackColor = System.Drawing.Color.DarkSlateGray
         Me.tbpassword.Font = New System.Drawing.Font("Yu Gothic UI", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbpassword.ForeColor = System.Drawing.SystemColors.Control
         Me.tbpassword.Location = New System.Drawing.Point(134, 131)
         Me.tbpassword.Name = "tbpassword"
         Me.tbpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -60,7 +64,7 @@ Partial Class Inicio_sesion
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.Location = New System.Drawing.Point(193, 192)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(198, 54)
+        Me.Button1.Size = New System.Drawing.Size(198, 42)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = False
