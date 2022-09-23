@@ -7,13 +7,13 @@ Public Class Menuinicio
         Dim da As MySqlDataAdapter
         Dim ds As New DataSet
         conect.Open()
-        Dim sQuery = "Select t.id_tienda, m.nombre_muni from tienda t INNER JOIN municipio m on t.id_municipio = m.id_municipio where t.id_encargado = '" & Inicio_sesion.id & "';"
+        Dim sQuery = "Select t.id_tienda, m.nombre_muni, t.direccion from tienda t INNER JOIN municipio m on t.id_municipio = m.id_municipio where t.id_encargado = '" & Inicio_sesion.id & "';"
         da = New MySqlDataAdapter(sQuery, conect)
         da.Fill(ds, "tienda")
         conect.Close()
 
         tienda = ds.Tables("tienda").Rows(0).Item(0)
-        tbtienda.Text = ds.Tables("tienda").Rows(0).Item(1)
+        tbtienda.Text = ds.Tables("tienda").Rows(0).Item(1) & " " & ds.Tables("tienda").Rows(0).Item(2)
 
         tbencargado.Text = Inicio_sesion.id & " " & Inicio_sesion.encargado
 

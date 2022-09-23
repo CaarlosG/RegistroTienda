@@ -71,7 +71,7 @@ Partial Class Menuinicio
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(537, 24)
+        Me.Label1.Location = New System.Drawing.Point(471, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 17)
         Me.Label1.TabIndex = 5
@@ -81,10 +81,10 @@ Partial Class Menuinicio
         '
         Me.tbtienda.BackColor = System.Drawing.Color.DarkSlateGray
         Me.tbtienda.ForeColor = System.Drawing.SystemColors.Control
-        Me.tbtienda.Location = New System.Drawing.Point(599, 21)
+        Me.tbtienda.Location = New System.Drawing.Point(533, 21)
         Me.tbtienda.Name = "tbtienda"
         Me.tbtienda.ReadOnly = True
-        Me.tbtienda.Size = New System.Drawing.Size(196, 22)
+        Me.tbtienda.Size = New System.Drawing.Size(262, 22)
         Me.tbtienda.TabIndex = 6
         '
         'tbencargado
