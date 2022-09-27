@@ -44,5 +44,9 @@ Public Class Menuinicio
 
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+        Registro_ventas.Show()
 
+    End Sub
 End Class

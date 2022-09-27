@@ -28,6 +28,7 @@ Partial Class Menuinicio
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbtienda = New System.Windows.Forms.TextBox()
         Me.tbencargado = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button2
@@ -97,13 +98,26 @@ Partial Class Menuinicio
         Me.tbencargado.Size = New System.Drawing.Size(148, 22)
         Me.tbencargado.TabIndex = 7
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button4.Location = New System.Drawing.Point(12, 223)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(783, 53)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "Registro de ventas"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Menuinicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(807, 509)
+        Me.ClientSize = New System.Drawing.Size(807, 301)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.tbencargado)
         Me.Controls.Add(Me.tbtienda)
         Me.Controls.Add(Me.Label1)
@@ -124,4 +138,5 @@ Partial Class Menuinicio
     Friend WithEvents Label1 As Label
     Friend WithEvents tbtienda As TextBox
     Friend WithEvents tbencargado As TextBox
+    Friend WithEvents Button4 As Button
 End Class
